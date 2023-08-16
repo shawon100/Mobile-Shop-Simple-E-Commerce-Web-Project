@@ -4,7 +4,7 @@ require_once("config.php");
 
 $user=$_POST['uname'];
 $email=$_POST['email'];
-$password=$_POST['password'];
+$password=md5($_POST['password']);
 $phone=$_POST['phone'];
 
 $query="INSERT into users(name,password,email,phone) VALUES('$user','$password','$email','$phone')";
